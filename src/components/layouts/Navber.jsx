@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import NavLink from '../buttons/NavLink'
 import Link from 'next/link'
+import { BsCartFill } from "react-icons/bs";
 
 const Navber = () => {
     const nav = <>
@@ -39,8 +40,11 @@ const Navber = () => {
      {nav}
     </ul>
   </div>
-  <div className="navbar-end">
-    <Link href={"/login"}>
+  <div className="navbar-end space-x-6">
+    <Link href={"/cart"} className='btn btn-primary'>
+    <BsCartFill />
+    </Link>
+    <Link href={"/login"}  >
     <button className='btn btn-primary btn-outline'>Login</button>
     </Link>
   </div>
